@@ -2,13 +2,13 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QPainter, QColor
 from random import *
-from PyQt5 import uic
+from fff import Ui_MainWindow
 
 
-class WordTrick(QMainWindow):
+class WordTrick(QMainWindow, Ui_MainWindow):
     def __init__(self):
         super().__init__()
-        uic.loadUi('UI.ui', self)
+        self.setupUi(self)
         self.trick_button.clicked.connect(self.draw_flag)
         self.do = False
 
@@ -19,7 +19,7 @@ class WordTrick(QMainWindow):
             x, y = 50, 60
             h = randint(0, 100)
             w = h
-            qp.setBrush(QColor(255, 247, 34))
+            qp.setBrush(QColor(randint(0, 255), randint(0, 255), randint(0, 255)))
             qp.drawEllipse(x, y, w, h)
             qp.end()
 
