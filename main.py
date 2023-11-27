@@ -2,7 +2,7 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QPainter, QColor
 from random import *
-from fff import Ui_MainWindow
+from new_fff import Ui_MainWindow
 
 
 class WordTrick(QMainWindow, Ui_MainWindow):
